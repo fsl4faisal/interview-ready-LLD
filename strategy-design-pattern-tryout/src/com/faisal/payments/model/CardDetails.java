@@ -1,14 +1,21 @@
 package com.faisal.payments.model;
 
-import lombok.Builder;
+import lombok.*;
 
+@AllArgsConstructor
+@With
+@Getter
 @Builder
+@ToString
 public class CardDetails {
+    @NonNull
     private final String cardNumber;
+    @NonNull
     private final String cvv;
-    private final String id;
+    @NonNull
     private final Type type;
-    private final double availableBalance;
+    @NonNull
+    private final double availableBalance;//this information will be filled by Bank Database
 
     public double getAvailableBalance() {
         return availableBalance;

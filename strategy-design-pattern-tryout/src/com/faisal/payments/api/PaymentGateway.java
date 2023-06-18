@@ -11,8 +11,8 @@ CreditCard:
 import com.faisal.payments.model.CardDetails;
 import com.faisal.payments.model.Type;
 
-import java.sql.Timestamp;
+import java.time.Instant;
 
 public interface PaymentGateway {
-    void processPayment(Type type, CardDetails from, CardDetails to, double amount, Timestamp timestamp);
+    boolean processPayment(Type type, CardDetails from, CardDetails to, double amount, Instant instant) throws Exception;
 }
