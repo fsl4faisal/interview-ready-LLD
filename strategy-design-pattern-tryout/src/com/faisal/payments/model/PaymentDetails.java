@@ -7,10 +7,10 @@ import lombok.*;
 @Getter
 @Builder
 @ToString
-public class CardDetails {
+public class PaymentDetails {
     @NonNull
-    private final String cardNumber;
-    @NonNull
+    private final String identifier;
+
     private final String cvv;
     @NonNull
     private final Type type;
@@ -19,13 +19,5 @@ public class CardDetails {
 
     public double getAvailableBalance() {
         return availableBalance;
-    }
-
-    public void deductAmount(double amount) {
-
-    }
-
-    public void addAmount(double amount) {
-
     }
 }

@@ -8,11 +8,11 @@ CreditCard:
  */
 
 
-import com.faisal.payments.model.CardDetails;
+import com.faisal.payments.model.PaymentDetails;
 import com.faisal.payments.model.Type;
 
 import java.time.Instant;
 
 public interface PaymentGateway {
-    boolean processPayment(Type type, CardDetails from, CardDetails to, double amount, Instant instant) throws Exception;
+    boolean processPayment(PaymentDetails from, PaymentDetails to, double amount, Instant instant) throws Exception;
 }
