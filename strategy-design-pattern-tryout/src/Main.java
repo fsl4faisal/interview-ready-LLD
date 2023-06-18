@@ -23,5 +23,12 @@ public class Main {
                 Instant.now());
 
 
+        v.processPayment(
+                Database.getCreditCardDetails(Database.CARD_NUMBER1),
+                Database.getPaypalDetails(Database.PAYPAL_USERNAME1),
+                122,
+                Instant.now());
+
+
     }
 }

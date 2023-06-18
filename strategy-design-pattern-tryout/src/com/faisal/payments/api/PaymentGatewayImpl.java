@@ -50,6 +50,7 @@ public class PaymentGatewayImpl implements PaymentGateway {
             switch (from.getType()) {
                 case UPI -> paymentDetails = Database.getUpiDetails(from.getIdentifier());
                 case CREDIT_CARD -> paymentDetails = Database.getCreditCardDetails(from.getIdentifier());
+                case PAYPAL -> paymentDetails = Database.getPaypalDetails(from.getIdentifier());
             }
         } catch (NoSuchElementException e) {
             throw new RuntimeException(e.getCause());
