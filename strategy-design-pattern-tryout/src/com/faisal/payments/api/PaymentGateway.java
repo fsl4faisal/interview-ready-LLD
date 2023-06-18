@@ -9,7 +9,6 @@ CreditCard:
 
 
 import com.faisal.payments.model.PaymentDetails;
-import com.faisal.payments.model.Type;
 
 import java.time.Instant;
 

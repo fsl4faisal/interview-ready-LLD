@@ -1,8 +1,6 @@
 import com.faisal.payments.api.PaymentGatewayImpl;
 import com.faisal.payments.inmemory_database.Database;
-import com.faisal.payments.model.Type;
 
-import javax.xml.crypto.Data;
 import java.time.Instant;
 
 public class Main {
